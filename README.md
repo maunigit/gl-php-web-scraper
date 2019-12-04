@@ -1,4 +1,3 @@
-## SCRAPING
 
 Gli scraper devono essere eseguiti tramite robo, posizionandosi con il terminale nella cartella `build`
  
