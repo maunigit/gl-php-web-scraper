@@ -1,0 +1,34 @@
+# This file is for unifying the coding style for different editors and IDEs
+# editorconfig.org
+
+root = true
+
+[*]
+charset                  = utf-8
+end_of_line              = lf
+insert_final_newline     = true
+trim_trailing_whitespace = true
+indent_style             = tab
+tab_width                = 4
+
+# HTML-Files XML-Files, CSS-Files JS-Files JSON-Files
+[{*.dtd,*.html,*.xsd,*.xsl,*.css,*.js,*.json}]
+indent_size              = 4
+indent_style             = space
+
+# PHP-Files, Composer.json
+[{*.php,composer.json}]
+indent_size = 4
+
+# YML-Files, Gitlab-CI config, Travis-CI config
+[*.yml]
+indent_style = space
+indent_size = 2
+
+# MD-Files
+[*.md]
+trim_trailing_whitespace = false
+indent_style             = space
+max_line_length          = 80
+
+

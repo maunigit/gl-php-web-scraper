@@ -1,0 +1,51 @@
+{
+	"name": "core/php-web-scraper",
+	"repositories": [
+		{
+			"type": "git",
+			"url": "https://github.com/iubar/iubar-web-test.git"
+		}
+	],
+	"require": {
+        "php": ">=7.2.0",
+        "ext-xml": "*",
+        "ext-mbstring": "*",
+        "ext-curl": "*",
+        "ext-zip": "*",
+        "ext-intl": "*",
+        "facebook/webdriver" : ">=1.7",
+		"iubar/iubar-web-test": "dev-master@dev",
+		"guzzlehttp/guzzle": "^6.3",
+		"monolog/monolog": "^2.0",
+		"bramus/monolog-colored-line-formatter": "~3.0",
+		"consolidation/robo" : "*",
+		"gordonlesti/levenshtein": "^1.0"		
+	},
+	"require-dev" : {
+		"overtrue/phplint" : "*",
+		"jakub-onderka/php-parallel-lint" : "*",
+		"jakub-onderka/php-console-highlighter": "*",
+        "phpunit/phpunit": "^7.2",		
+        "codeception/codeception": "^3.1",
+        "codeception/mockery-module": "*",		
+		"phpstan/phpstan-shim": "*"		
+	}, 
+	"autoload": {
+		"psr-4": {
+			"Application\\": "src/Application/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Application\\": "tests/Application/"
+		}
+	},	
+    "scripts": {
+		"lint1": "./vendor/bin/phplint . --exclude=vendor",
+		"lint2": "./vendor/bin/parallel-lint --exclude vendor .",
+		"phpstan": "./vendor/bin/phpstan analyse src tests",
+		"phpstan-ci": "./vendor/bin/phpstan analyse src tests --no-interaction --no-progress",
+		"test": ".\\vendor\\bin\\phpunit"
+    }
+	
+}

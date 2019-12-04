@@ -1,0 +1,18 @@
+{
+   "printWidth": 120,
+   "tabWidth": 4,
+   "useTabs": false,  
+   "singleQuote": false,	
+   "semi": false,
+   "trailingComma": "es5",
+   "trailingCommaPHP": "all",
+   "braceStyle": "1tbs",
+   "requirePragma":	false,
+   "insertPragma":	false,			
+   "bracketSpacing": true,
+   "jsxBracketSameLine": false,
+   "jsxSingleQuote": false,
+   "arrowParens": "always",
+   "proseWrap": "never"	
+}
+ 

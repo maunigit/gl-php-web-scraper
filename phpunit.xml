@@ -1,0 +1,18 @@
+<!-- For a detailed explanation 
+see: https://phpunit.readthedocs.io/en/8.3/organizing-tests.html
+see: https://gist.github.com/GaryRogers/0fb41d649fa75d58eb8f
+--> 
+<phpunit bootstrap="vendor/autoload.php" colors="true">
+  <testsuites>
+    <testsuite name="php-web-scraper Test Suite">
+      <directory>tests</directory> 
+      <!--
+      <file>tests\Application\Services\LevenshteinMultibyteTest.php</file>
+      <file>tests\Application\Services\LevenshteinTest.php</file>
+      <file>tests\Application\Services\LevGordonLestiTest.php</file>
+      <file>tests\Application\Services\MakeMatcherTest.php</file>
+      <file>tests\Application\Services\TokenizerTest.php</file>
+      -->      
+    </testsuite>
+  </testsuites>
+</phpunit>

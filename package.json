@@ -1,0 +1,25 @@
+{
+  "name": "php-web-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "license": "",
+  "homepage": "",
+  "dependencies": {},
+  "devDependencies": {  
+	"prettier": "^1.18.2",
+	"@prettier/plugin-php": "*",	
+	"npm-check-updates" : "*"
+  },
+  "scripts": {
+    "push": "git add -A && git commit -m \"[skip ci]\" & git pull && git push -o ci.skip",
+    "ci": "git add -A && git commit -m \"[run ci]\" & git pull && git push",
+    "prettier-ok": "prettier \"index.php\" \"src/**/*.php\" \"tests/**/*.php\"",
+	  "prettier-ko": "prettier \"./**/*.php\"",
+	  "prettier-php": "prettier \"./**/*.php\" \"!./vendor/**\"",
+    "prettier-php:fix": "npm run prettier -- --write",
+	  "prettier-php:check": "npm run prettier -- --check",
+	  "selenium-start": "java -Dwebdriver.chrome.driver=/usr/bin/chromedriver -jar selenium-server-standalone-3.141.59.jar",
+	  "info": "npm list --depth=0 & ncu & npm outdated"
+  }
+}
